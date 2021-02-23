@@ -1,0 +1,164 @@
+.topnav {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    background-color: #000000d7;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    color: #ffd700;
+    font-family: 'Comfortaa', cursive; 
+    font-size: 22px;
+    text-decoration: none;
+  }
+  .topnav a img{
+    border-radius: 80px;
+  }
+  .topnav a img:hover{
+    transform: scale(1.1);
+    background-color: #000000d7;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    color: #1cf309;
+    background-color: #ffd90073;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .service {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 30px 0;
+  }
+  
+  .products-inner {
+    min-width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-item {
+    position: relative;
+    min-width: 190px;
+    min-height: 190px;
+    margin: 20px;
+    border-radius: 200px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 5px #b6b6b6;
+  }
+  
+  .product-item:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    min-width: 190px;
+    min-height: 190px;
+    border-radius: 200px;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlayOnOff {
+    opacity: 0;
+  }
+  
+  .overlay > h3 {
+    width: 30%;
+    margin-right: 30%;
+  }
+  
+  .show-description {
+    opacity: 1;
+  }
+
+  #product-1 {
+    background-image: url(images/cookie.jpg);
+  }
+  
+  #product-2 {
+    background-image: url(images/cupcake1.jpg);
+  }
+  
+  #product-3 {
+    background-image: url(images/waffles.jpg);
+  }
+  
+  #product-4 {
+    background-image: url(images/fruit_parfait.jpg);
+  }
+  
+  #product-5 {
+    background-image: url(images/kiwi_passion.jpg);
+  }
+  
+  #product-6 {
+    background-image: url(images/frozen_mocktail.jpg);
+  }
+  #product-7 {
+    background-image: url(images/shaken_mocktail.jpg);
+  }
+  #product-8 {
+    background-image: url(images/pinacolada.jpg);
+  }
+
+  .footer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+
+  /* .siteNav {
+    width: 40%;
+    margin: 10px;
+  } */
