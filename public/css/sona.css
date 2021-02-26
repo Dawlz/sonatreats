@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'Affectionately Yours';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/public/Affectionately Yours.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.header {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background-color: rgba(34, 34, 34, 0.9);
+}
+
+.header__logo {
+  margin-left: 50px;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.header-nav__item {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 0px 15px;
+  color: #fba733;
+  font-family: 'Affectionately Yours';
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.header-nav__item:last-child {
+  margin-right: 50px;
+}
+
+.header-nav__item:hover {
+  text-decoration: none;
+  color: #dd8204;
+  color: red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+}
+
+/* Style the links inside the navigation bar */
+.intro {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.service {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.products {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0 30px 0;
+}
+
+.products-inner {
+  min-width: 100%;
+  min-height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-item {
+  position: relative;
+  min-width: 190px;
+  min-height: 190px;
+  margin: 20px;
+  border-radius: 200px;
+  background-position: center;
+  background-size: cover;
+  -webkit-box-shadow: 0 0 5px #b6b6b6;
+          box-shadow: 0 0 5px #b6b6b6;
+}
+
+.product-item:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  min-width: 190px;
+  min-height: 190px;
+  border-radius: 200px;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overlayOnOff {
+  opacity: 0;
+}
+
+.overlay > h3 {
+  width: 30%;
+  margin-right: 30%;
+}
+
+.show-description {
+  opacity: 1;
+}
+
+#product-1 {
+  background-image: url(/images/cookie.jpg);
+}
+
+#product-2 {
+  background-image: url(/images/cupcake1.jpg);
+}
+
+#product-3 {
+  background-image: url(/images/waffles.jpg);
+}
+
+#product-4 {
+  background-image: url(/images/fruit_parfait.jpg);
+}
+
+#product-5 {
+  background-image: url(/images/kiwi_passion.jpg);
+}
+
+#product-6 {
+  background-image: url(/images/frozen_mocktail.jpg);
+}
+
+#product-7 {
+  background-image: url(/images/shaken_mocktail.jpg);
+}
+
+#product-8 {
+  background-image: url(/images/pinacolada.jpg);
+}
+
+.footer {
+  height: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* .siteNav {
+    width: 40%;
+    margin: 10px;
+  } */
