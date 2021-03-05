@@ -145,9 +145,9 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -159,19 +159,30 @@ html {
 .header .hero__cta-button {
   font-family: 'Arial';
   font-size: 2rem;
-  padding: 20px 50px;
+  padding: 2rem 5rem;
   border-radius: 50px;
   border: none;
   text-transform: uppercase;
-  background-image: -webkit-gradient(linear, right top, left top, from(#fba733), to(#a8cf45));
-  background-image: linear-gradient(to left, #fba733, #a8cf45);
+  background-color: #f3f0f0;
   -webkit-box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
           box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  outline: none;
 }
 
 .header .hero__cta-button:hover {
-  -webkit-animation: pulsate 1s infinite;
-          animation: pulsate 1s infinite;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 5rem 6rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+.header .hero__cta-button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .header .hero::before {
