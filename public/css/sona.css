@@ -5,50 +5,6 @@
   src: url("/public/Affectionately Yours.ttf") format("truetype");
 }
 
-@-webkit-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  50% {
-    /* This is blurry, haven't found a fix. */
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
-            box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-}
-
-@keyframes pulsate {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  50% {
-    /* This is blurry, haven't found a fix. */
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
-            box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -75,6 +31,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: sans-serif, 'Arial';
+  background-color: #f3f0f0;
+  color: #1d1d1d;
 }
 
 html {
@@ -133,6 +92,7 @@ html {
 }
 
 .header .hero {
+  padding: 50px 0;
   height: 50rem;
   background-size: cover;
   background-position: center;
@@ -145,19 +105,15 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
-  -webkit-box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
 .header .hero__cta-button {
-  font-family: 'Arial';
   font-size: 2rem;
   padding: 2rem 5rem;
   border-radius: 50px;
@@ -266,81 +222,20 @@ html {
   text-decoration: none;
 }
 
-/* Style the links inside the navigation bar */
-.intro {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.service {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.products {
+.divider {
+  content: ' ';
+  z-index: 10;
+  margin-top: -30px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 0 30px 0;
+  background: radial-gradient(circle at 50% 0%, transparent 25%, #f3f0f0 26%);
+  background-size: 50px 100px;
+  height: 50px;
+  background-repeat: repeat-x;
 }
 
-.products-inner {
-  min-width: 100%;
-  min-height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.product-item {
+.about-us {
   position: relative;
-  min-width: 190px;
-  min-height: 190px;
-  margin: 20px;
-  border-radius: 200px;
-  background-position: center;
-  background-size: cover;
-  -webkit-box-shadow: 0 0 5px #b6b6b6;
-          box-shadow: 0 0 5px #b6b6b6;
-}
-
-.product-item:hover {
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.overlay {
-  position: absolute;
-  min-width: 190px;
-  min-height: 190px;
-  border-radius: 200px;
-  top: 0;
-  left: 0;
-  background: #ffffff;
+  background-color: #f3f0f0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,71 +246,42 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 75%;
+  color: #1d1d1d;
 }
 
-.overlayOnOff {
-  opacity: 0;
+.about-us__header {
+  font-family: 'Affectionately Yours';
+  letter-spacing: 2px;
+  margin: 2.5rem 0;
+  font-size: 5rem;
 }
 
-.overlay > h3 {
-  width: 30%;
-  margin-right: 30%;
+.about-us h4 {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
-.show-description {
-  opacity: 1;
-}
-
-#product-1 {
-  background-image: url(/images/cookie.jpg);
-}
-
-#product-2 {
-  background-image: url(/images/cupcake1.jpg);
-}
-
-#product-3 {
-  background-image: url(/images/waffles.jpg);
-}
-
-#product-4 {
-  background-image: url(/images/fruit_parfait.jpg);
-}
-
-#product-5 {
-  background-image: url(/images/kiwi_passion.jpg);
-}
-
-#product-6 {
-  background-image: url(/images/frozen_mocktail.jpg);
-}
-
-#product-7 {
-  background-image: url(/images/shaken_mocktail.jpg);
-}
-
-#product-8 {
-  background-image: url(/images/pinacolada.jpg);
-}
-
-.footer {
-  height: auto;
-  width: 100%;
+.about-us__content {
+  font-weight: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 2rem;
+}
+
+.about-us__text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.about-us__images img {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
 }
 
 /* .siteNav {
