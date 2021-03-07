@@ -225,6 +225,7 @@ html {
 	background-color: $background-light;
 	display: flex;
 	flex-direction: column;
+	line-height: 1.5;
 	// margin-top: 10rem;
 	align-items: center;
 	// flex-basis: 75%;
@@ -234,8 +235,9 @@ html {
 
 	h4 {
 		letter-spacing: 2px;
-		font-size: 2.5rem;
+		font-size: 3rem;
 		font-weight: 700;
+		margin-bottom: 1.5rem;
 	}
 
 	&__content {
@@ -318,7 +320,7 @@ html {
 		border-radius: 2px;
 		background-color: rgba($background-light, 0.8);
 		flex-basis: 20%;
-		padding: 2rem 3rem;
+		padding: 2rem;
 		transition: all 0.2s;
 		cursor: default;
 		&__title {
@@ -329,6 +331,7 @@ html {
 		}
 		&__description {
 			font-size: 2rem;
+			line-height: 1.5;
 		}
 
 		&:hover {
