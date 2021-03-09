@@ -42,7 +42,7 @@ html {
   font-size: 62.5%;
 }
 
-.contain {
+.container {
   width: 100%;
   background: repeating-linear-gradient(135deg, rgba(251, 167, 51, 0.2), #fba733 10px, rgba(168, 207, 69, 0.2) 10px, #a8cf45 20px);
 }
@@ -225,7 +225,7 @@ html {
   text-decoration: none;
 }
 
-.divider {
+.divider-bottom {
   z-index: 10;
   margin-top: -30px;
   width: 100%;
@@ -233,6 +233,14 @@ html {
   background: radial-gradient(circle at 50% 0%, transparent 25%, #f3f0f0 26%);
   background-size: 50px 100px;
   background-repeat: repeat-x;
+}
+
+.divider-top {
+  width: 100%;
+  height: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: repeating-linear-gradient(135deg, rgba(251, 167, 51, 0.2), #fba733 10px, rgba(168, 207, 69, 0.2) 10px, #a8cf45 20px);
 }
 
 .section-header {
@@ -333,13 +341,11 @@ html {
 }
 
 .services {
-  margin-bottom: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
-  width: 100%;
   padding: 5rem 2rem 10rem 2rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -369,6 +375,7 @@ html {
 }
 
 .cards .card {
+  cursor: default;
   border-radius: 2px;
   background-color: rgba(243, 240, 240, 0.8);
   -ms-flex-preferred-size: 20%;
@@ -376,7 +383,6 @@ html {
   padding: 2rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  cursor: default;
 }
 
 .cards .card__title {
@@ -396,8 +402,8 @@ html {
           transform: scale(1.2);
 }
 
-.products {
-  width: 100%;
+.creations {
+  padding: 5rem 2rem 10rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,62 +417,68 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 0 30px 0;
+  width: 75%;
 }
 
-.products-inner {
-  min-width: 100%;
-  min-height: auto;
+.creations__content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.product-item {
+.creations .card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
   position: relative;
-  min-width: 190px;
-  min-height: 190px;
-  margin: 20px;
-  border-radius: 200px;
-  background-position: center;
-  background-size: cover;
-  -webkit-box-shadow: 0 0 5px #b6b6b6;
-          box-shadow: 0 0 5px #b6b6b6;
+  height: 20rem;
+  width: 20rem;
+  margin: 2rem;
 }
 
-.product-item:hover {
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.creations .card:nth-child(3n + 0) .card__side--front {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fba733), to(#a8cf45));
+  background-image: linear-gradient(to right bottom, #fba733, #a8cf45);
 }
 
-.overlay {
+.creations .card:nth-child(3n + 1) .card__side--front {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a8cf45), to(#fba733));
+  background-image: linear-gradient(to right bottom, #a8cf45, #fba733);
+}
+
+.creations .card:nth-child(3n + 2) .card__side--front {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a8cf45), to(#fba733));
+  background-image: linear-gradient(to top, #a8cf45, #fba733);
+}
+
+.creations .card__side {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
   position: absolute;
-  min-width: 190px;
-  min-height: 190px;
-  border-radius: 200px;
   top: 0;
   left: 0;
-  background: #ffffff;
+  padding: 4rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  width: inherit;
+  height: inherit;
+  border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -475,49 +487,52 @@ html {
           justify-content: center;
 }
 
-.overlayOnOff {
-  opacity: 0;
+.creations .card__side--front {
+  color: #1d1d1d;
+  font-family: 'Affectionately Yours';
+  font-size: 5rem;
 }
 
-.overlay > h3 {
-  width: 30%;
-  margin-right: 30%;
+.creations .card__side--back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-size: cover;
 }
 
-.show-description {
-  opacity: 1;
+.creations .card__side--back-1 {
+  background-image: url("/images/cookie1.jpg");
 }
 
-#product-1 {
-  background-image: url(/images/cookie.jpg);
+.creations .card__side--back-2 {
+  background-image: url("/images/cupcake-hero.jpg");
 }
 
-#product-2 {
-  background-image: url(/images/cupcake1.jpg);
+.creations .card__side--back-3 {
+  background-image: url("/images/waffle1.jpg");
 }
 
-#product-3 {
-  background-image: url(/images/waffles.jpg);
+.creations .card__side--back-4 {
+  background-image: url("/images/parfait.jpg");
 }
 
-#product-4 {
-  background-image: url(/images/fruit_parfait.jpg);
+.creations .card__side--back-5 {
+  background-position-y: 40%;
+  background-image: url("/images/cocktail1.jpg");
 }
 
-#product-5 {
-  background-image: url(/images/kiwi_passion.jpg);
+.creations .card__side--back-6 {
+  background-position-y: 50%;
+  background-image: url("/images/mocktail1.jpg");
 }
 
-#product-6 {
-  background-image: url(/images/frozen_mocktail.jpg);
+.creations .card:hover .card__side--front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
-#product-7 {
-  background-image: url(/images/shaken_mocktail.jpg);
-}
-
-#product-8 {
-  background-image: url(/images/pinacolada.jpg);
+.creations .card:hover .card__side--back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 
 .footer {

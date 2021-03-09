@@ -35,7 +35,7 @@ html {
 	font-size: 62.5%; //1rem = 10px
 }
 
-.contain {
+.container {
 	width: 100%;
 	background: repeating-linear-gradient(
 		135deg,
@@ -100,7 +100,6 @@ html {
 			cursor: pointer;
 			text-transform: uppercase;
 			background-color: $background-light;
-			// background-image: linear-gradient(to left, $brand-orange, $brand-green);
 			box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 			transition: all 0.2s;
 			outline: none;
@@ -111,7 +110,6 @@ html {
 
 			&:active {
 				box-shadow: none;
-				// box-shadow: 0 5rem 6rem rgba(0, 0, 0, 0.3);
 				transform: scale(1);
 			}
 		}
@@ -201,7 +199,7 @@ html {
 	}
 }
 
-.divider {
+.divider-bottom {
 	z-index: 10;
 	margin-top: -30px;
 	width: 100%;
@@ -211,11 +209,22 @@ html {
 	background-repeat: repeat-x;
 }
 
+.divider-top {
+	width: 100%;
+	height: 25px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background: repeating-linear-gradient(
+		135deg,
+		rgba($brand-orange, 0.2),
+		rgba($brand-orange, 1) 10px,
+		rgba($brand-green, 0.2) 10px,
+		rgba($brand-green, 1) 20px
+	);
+}
+
 .section-header {
 	font-family: 'Affectionately Yours';
-	// letter-spacing: 2px;
-	// margin: 2.5rem 0;
-	// flex-basis: 60%;
 	font-size: 6rem;
 	margin-bottom: 10rem;
 }
@@ -226,11 +235,8 @@ html {
 	display: flex;
 	flex-direction: column;
 	line-height: 1.5;
-	// margin-top: 10rem;
 	align-items: center;
-	// flex-basis: 75%;
 	color: $base-font-color;
-	// margin: 2rem 0
 	padding: 5rem 0;
 
 	h4 {
@@ -242,13 +248,10 @@ html {
 
 	&__content {
 		height: 50rem;
-		// text-align:
-		// width: 50%;
 		width: 75%;
 		font-weight: 100;
 		display: flex;
 		justify-content: space-between;
-		// flex-wrap: wrap;
 		font-size: 2rem;
 	}
 
@@ -256,6 +259,7 @@ html {
 		flex-basis: 50%;
 		padding-right: 10rem;
 	}
+
 	.composition {
 		padding-left: 10rem;
 		flex-basis: 50%;
@@ -271,8 +275,6 @@ html {
 		}
 		#img-3 {
 			top: 15rem;
-
-			// right: 40px;
 		}
 
 		&__photo {
@@ -296,16 +298,12 @@ html {
 }
 
 .services {
-	margin-bottom: 20rem;
 	display: flex;
 	flex-basis: 75%;
-	width: 100%;
 	padding: 5rem 2rem 10rem 2rem;
-	// height: 60rem;
 	flex-direction: column;
 	align-items: center;
 	background-position: center;
-	// background-position: 50px;
 	background-image: linear-gradient(to right bottom, rgba($brand-orange, 0.6), rgba($brand-green, 0.6)), url('/images/event1.jpg');
 	background-size: cover;
 }
@@ -317,12 +315,12 @@ html {
 	align-items: stretch;
 	flex-wrap: wrap;
 	.card {
+		cursor: default;
 		border-radius: 2px;
 		background-color: rgba($background-light, 0.8);
 		flex-basis: 20%;
 		padding: 2rem;
 		transition: all 0.2s;
-		cursor: default;
 		&__title {
 			font-family: 'Affectionately Yours';
 			font-size: 3rem;
@@ -340,97 +338,182 @@ html {
 	}
 }
 
-.products {
-	width: 100%;
+.creations {
+	padding: 5rem 2rem 10rem 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 0 0 30px 0;
+	width: 75%;
+
+	&__content {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	.card {
+		// FUNCTIONALITY
+		perspective: 150rem;
+		-moz-perspective: 150rem;
+		position: relative;
+		height: 20rem;
+		width: 20rem;
+		margin: 2rem;
+
+		&:nth-child(3n + 0) .card__side--front {
+			background-image: linear-gradient(to right bottom, $brand-orange, $brand-green);
+		}
+		&:nth-child(3n + 1) .card__side--front {
+			background-image: linear-gradient(to right bottom, $brand-green, $brand-orange);
+		}
+		&:nth-child(3n + 2) .card__side--front {
+			background-image: linear-gradient(to top, $brand-green, $brand-orange);
+		}
+
+		&__side {
+			transition: all 0.8s ease;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 4rem;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			border-radius: 3px;
+			overflow: hidden;
+			box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+			width: inherit;
+			height: inherit;
+			border-radius: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&--front {
+				color: $base-font-color;
+				font-family: 'Affectionately Yours';
+				font-size: 5rem;
+			}
+
+			&--back {
+				transform: rotateY(180deg);
+				background-size: cover;
+				&-1 {
+					background-image: url('/images/cookie1.jpg');
+				}
+				&-2 {
+					background-image: url('/images/cupcake-hero.jpg');
+				}
+				&-3 {
+					background-image: url('/images/waffle1.jpg');
+				}
+				&-4 {
+					background-image: url('/images/parfait.jpg');
+				}
+				&-5 {
+					background-position-y: 40%;
+					background-image: url('/images/cocktail1.jpg');
+				}
+				&-6 {
+					background-position-y: 50%;
+
+					background-image: url('/images/mocktail1.jpg');
+				}
+			}
+		}
+
+		&:hover .card__side--front {
+			transform: rotateY(-180deg);
+		}
+		&:hover .card__side--back {
+			transform: rotateY(0);
+		}
+	}
 }
 
-.products-inner {
-	min-width: 100%;
-	min-height: auto;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-}
+// .products-inner {
+// 	min-width: 100%;
+// 	min-height: auto;
+// 	display: flex;
+// 	flex-direction: row;
+// 	flex-wrap: wrap;
+// 	align-items: center;
+// 	justify-content: center;
+// }
 
-.product-item {
-	position: relative;
-	min-width: 190px;
-	min-height: 190px;
-	margin: 20px;
-	border-radius: 200px;
-	background-position: center;
-	background-size: cover;
-	box-shadow: 0 0 5px #b6b6b6;
-}
+// .product-item {
+// 	position: relative;
+// 	min-width: 190px;
+// 	min-height: 190px;
+// 	margin: 20px;
+// 	border-radius: 200px;
+// 	background-position: center;
+// 	background-size: cover;
+// 	box-shadow: 0 0 5px #b6b6b6;
+// }
 
-.product-item:hover {
-	cursor: pointer;
-	transform: scale(1.1);
-}
+// .product-item:hover {
+// 	cursor: pointer;
+// 	transform: scale(1.1);
+// }
 
-.overlay {
-	position: absolute;
-	min-width: 190px;
-	min-height: 190px;
-	border-radius: 200px;
-	top: 0;
-	left: 0;
-	background: #ffffff;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
+// .overlay {
+// 	position: absolute;
+// 	min-width: 190px;
+// 	min-height: 190px;
+// 	border-radius: 200px;
+// 	top: 0;
+// 	left: 0;
+// 	background: #ffffff;
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: center;
+// }
 
-.overlayOnOff {
-	opacity: 0;
-}
+// .overlayOnOff {
+// 	opacity: 0;
+// }
 
-.overlay > h3 {
-	width: 30%;
-	margin-right: 30%;
-}
+// .overlay > h3 {
+// 	width: 30%;
+// 	margin-right: 30%;
+// }
 
-.show-description {
-	opacity: 1;
-}
+// .show-description {
+// 	opacity: 1;
+// }
 
-#product-1 {
-	background-image: url(/images/cookie.jpg);
-}
+// #product-1 {
+// 	background-image: url(/images/cookie.jpg);
+// }
 
-#product-2 {
-	background-image: url(/images/cupcake1.jpg);
-}
+// #product-2 {
+// 	background-image: url(/images/cupcake1.jpg);
+// }
 
-#product-3 {
-	background-image: url(/images/waffles.jpg);
-}
+// #product-3 {
+// 	background-image: url(/images/waffles.jpg);
+// }
 
-#product-4 {
-	background-image: url(/images/fruit_parfait.jpg);
-}
+// #product-4 {
+// 	background-image: url(/images/fruit_parfait.jpg);
+// }
 
-#product-5 {
-	background-image: url(/images/kiwi_passion.jpg);
-}
+// #product-5 {
+// 	background-image: url(/images/kiwi_passion.jpg);
+// }
 
-#product-6 {
-	background-image: url(/images/frozen_mocktail.jpg);
-}
-#product-7 {
-	background-image: url(/images/shaken_mocktail.jpg);
-}
-#product-8 {
-	background-image: url(/images/pinacolada.jpg);
-}
+// #product-6 {
+// 	background-image: url(/images/frozen_mocktail.jpg);
+// }
+// #product-7 {
+// 	background-image: url(/images/shaken_mocktail.jpg);
+// }
+// #product-8 {
+// 	background-image: url(/images/pinacolada.jpg);
+// }
 
 .footer {
 	height: auto;

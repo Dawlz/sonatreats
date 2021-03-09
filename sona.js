@@ -22,8 +22,8 @@ $(function() {
         $(this).hide();
     })
 
-    $('.overlay').click(function(){
-        $(this).toggleClass('overlayOnOff')
-    })
+    // $('.overlay').click(function(){
+    //     $(this).toggleClass('overlayOnOff')
+    // })
 
 })
