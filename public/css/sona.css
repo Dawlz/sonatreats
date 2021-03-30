@@ -535,24 +535,93 @@ html {
           transform: rotateY(0);
 }
 
-.footer {
-  height: auto;
+.order {
+  height: 500px;
   width: 100%;
+}
+
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(rgba(251, 167, 51, 0.5)), to(rgba(168, 207, 69, 0.5)));
+  background-image: linear-gradient(to left top, rgba(251, 167, 51, 0.5), rgba(168, 207, 69, 0.5));
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
 }
 
-.siteNav {
-  width: 40%;
-  margin: 10px;
+.footer__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-bottom: 2rem;
+}
+
+.footer__social-media__heading {
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.footer__social-media__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer__site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding-top: 3rem;
+}
+
+.footer__site-nav a,
+.footer__site-nav a:visited,
+.footer__site-nav a:active {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+.footer__site-nav a:hover,
+.footer__site-nav a:visited:hover,
+.footer__site-nav a:active:hover {
+  text-decoration: underline;
+}
+
+.footer__copyright {
+  margin-top: 5rem;
+  font-size: 1rem;
 }
