@@ -594,6 +594,28 @@ html {
           justify-content: space-evenly;
 }
 
+.footer__direct-contact {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__direct-contact__heading {
+  font-size: 1.8rem;
+  padding: 2.5rem 0 1rem 0;
+}
+
+.footer__direct-contact__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .footer__site-nav {
   display: -webkit-box;
   display: -ms-flexbox;

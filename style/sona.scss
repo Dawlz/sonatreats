@@ -521,6 +521,9 @@ html {
 // 	background-image: url(/images/pinacolada.jpg);
 // }
 
+.order {
+}
+
 .footer {
 	display: flex;
 	flex-direction: column;
@@ -548,6 +551,22 @@ html {
 			justify-content: space-evenly;
 		}
 	}
+
+	&__direct-contact {
+		flex-direction: column;
+		&__heading {
+			font-size: 1.8rem;
+			padding: 2.5rem 0 1rem 0;
+
+		}
+
+		&__icons {
+			display: flex;
+			width: 100%;
+			justify-content: space-evenly;
+		}
+	}
+
 	&__site-nav {
 		display: flex;
 		width: 50%;
