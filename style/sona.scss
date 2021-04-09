@@ -521,7 +521,166 @@ html {
 // 	background-image: url(/images/pinacolada.jpg);
 // }
 
-.order {
+.order-modal {
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-image: linear-gradient(to left top, rgba($brand-orange, 0.9), rgba($brand-green, 0.9));
+	z-index: 1000;
+
+
+	&--hidden{
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		background-color: $background-light;
+		border-radius: 5px;
+		box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+		padding: 5rem;
+		height: 60vh;
+		width: 90vw;
+		max-width: 80rem;
+		font-size: 1.8rem;
+		justify-content: flex-start;
+		align-items: center;
+
+		&__close {
+			color: $base-font-color;
+			width: 4rem;
+			height: 4rem;
+			font-size: 4rem;
+			position: absolute;
+			padding: 2rem;
+			right: 1.5rem;
+			top: -1.5rem;
+			cursor: pointer;
+		}
+	}
+	&__title {
+		font-size: 4rem;
+		font-family: 'Affectionately Yours', sans-serif;
+		margin-bottom: 2rem;
+	}
+
+	&__content {
+		display: grid;
+		justify-content: stretch;
+		align-items: center;
+		transition: all 0.2s;
+
+		width: 100%;
+		grid-template-columns: repeat(2, minmax(min-content, 1fr));
+		grid-column-gap: 5rem;
+		grid-row-gap: 2rem;
+
+		.order-modal__col {
+			display: flex;
+			flex-direction: column;
+		}
+
+		input {
+			height: 4rem;
+			font-size: 1.7rem;
+			border: 1px solid black;
+			border-radius: 4px;
+			padding: 1rem 1.5rem;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+			&[type='date'] {
+				font-family: inherit;
+				font-size: inherit;
+				width: calc(100%);
+			}
+		}
+
+		.order-modal__textarea {
+			grid-column: 1 / -1;
+
+			textarea {
+				padding: 1rem 1.5rem;
+				font-size: 1.7rem;
+				border: 1px solid black;
+				border-radius: 4px;
+				padding: 1rem 1.5rem;
+				font-size: inherit;
+				font-family: inherit;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			}
+		}
+
+		button {
+			cursor: pointer;
+			font-size: 3rem;
+			padding: 2rem 5rem;
+			border-radius: 50px;
+			border: none;
+			background-color: $background-light;
+			background-image: linear-gradient(to left top, rgba($brand-green, 0.5), rgba($brand-green, 0.5));
+			box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+			transition: transform 0.2s;
+			outline: none;
+			font-family: 'Affectionately Yours', sans-serif;
+			grid-column: 1 / span 2;
+			justify-self: center;
+			margin: 3rem 0;
+
+			&:active {
+				box-shadow: none;
+				outline: none;
+			}
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	// &__row {
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	width: 100%;
+	// 	flex-wrap: wrap;
+	// 	justify-content: space-between;
+	// }
+	// &__col {
+	// 	// display: flex;
+	// 	// flex-direction: column;
+	// 	// flex-grow: 1;
+
+	// 	// margin: 1rem 3rem;
+	// 	input {
+	// 		height: 40rem;
+	// 		font-size: 1.7rem;
+	// 		border: 1px solid black;
+	// 		border-radius: 4px;
+	// 		// max-width: 100%;
+	// 		// width: auto;
+	// 		width: 100%;
+
+	// 		&[type='date'] {
+	// 			margin-left: -50px;
+	// 			width: calc(100% + 50px);
+	// 		}
+	// 	}
+
+	// 	// 	// 	flex: 0 0 100%;
+
+	// 	// 	// 	flex-wrap: wrap;
+	// }
 }
 
 .footer {
@@ -557,7 +716,6 @@ html {
 		&__heading {
 			font-size: 1.8rem;
 			padding: 2.5rem 0 1rem 0;
-
 		}
 
 		&__icons {

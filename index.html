@@ -122,7 +122,7 @@
 		<div class="divider-top"></div>
 		<!-- <section class="order" id="placeOrder"> -->
 
-			<!-- <div>
+		<!-- <div>
 				<form action="" method="post" id="formQuery">
 					<label for="orderType">What service do you need?</label>
 					<select id="order" name="orderType" size="1">
@@ -258,8 +258,9 @@
 					</div>
 				</section>
 				<input type="submit" value="Request Treat" /> -->
-			<!-- </form> -->
+		<!-- </form> -->
 		<!-- </section> -->
+
 		<div class="divider-bottom"></div>
 		<footer class="footer">
 			<section class="footer__social-media">
@@ -288,14 +289,14 @@
 						><img src="./images/phone-solid.svg" alt="call Us" height="35px" title="Give us a call"
 					/></a>
 					<a class="" href="mailto:sonaventures1@gmail.com?subject=Enquiry&body=Hello,%20I%20will%20like%20to%20place%20an%20order"
-						><img src="./images/envelope-solid.svg" alt="send mail" height="35px" title="send an Email" /></a
-					<a class="" href="sms:+2348136090668&body=Hello,%20I%20will%20like%20to%20place%20an%20order"
-						><img src="./images/messages-ios.svg" alt="send text on iOS" height="35px" title="send an Email" />
-						</a
-					>
-					<a class="" href="sms:+2348136090668?body=Hello,%20I%20will%20like%20to%20place%20an%20order">
-						<img src="./images/sms-solid.svg" alt="send text on android" height="35px" title="send an Email" />
-						</a
+						><img src="./images/envelope-solid.svg" alt="send mail" height="35px" title="send an Email"
+					/></a>
+					<a class="" href="sms:+2348136090668&body=Hello,%20I%20will%20like%20to%20place%20an%20order">
+						<img src="./images/messages-ios.svg" alt="send text on iOS" height="35px" title="send an Email"
+					/></a>
+					<a class="" href="sms:+2348136090668?body=Hello,%20I%20will%20like%20to%20place%20an%20order"
+						><img src="./images/sms-solid.svg" alt="send text on android" height="35px" title="send an Email"
+					/></a>
 				</div>
 			</section>
 
@@ -306,7 +307,13 @@
 				<a class="" href="#contact" title="Contact Us">Contact Us</a><br />
 				<a class="" href="#" title="Home">Back to top</a><br />
 			</section>
-			<section class="footer__copyright">&copy; <script>document.write(new Date().getFullYear())</script> Sona Treats. Developed with &#128153; by Dawlz</section>
+			<section class="footer__copyright">
+				&copy;
+				<script>
+					document.write(new Date().getFullYear());
+				</script>
+				Sona Treats. Developed with &#128153; by Dawlz
+			</section>
 			<!-- <div class="col-sm-4">
 				<section class="siteNav" id="navigate">
 					<h5 class="">Site Nav</h5>
@@ -371,5 +378,41 @@
 				</section>
 			</div> -->
 		</footer>
+		<div class="order-modal order-modal--hidden">
+			<div class="order-modal__container">
+				<div class="order-modal__container__close">&times;</div>
+				<div class="order-modal__title">Request a quote</div>
+				<form>
+					<div class="order-modal__content">
+						<div class="order-modal__col">
+							<label for="name">Name</label>
+							<input type="text" id="name" required />
+						</div>
+						<div class="order-modal__col">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required />
+						</div>
+						<div class="order-modal__col">
+							<label for="phone">Phone Number</label>
+							<input type="tel" name="phone" id="phone" required />
+						</div>
+						<div class="order-modal__col">
+							<label for="date">Date of Event</label>
+							<input type="date" name="date" id="date" required />
+						</div>
+						<div class="order-modal__col">
+							<label for="numGuests">Number of Guests</label>
+							<input type="number" min="0" name="numGuests" id="numGuests" required />
+						</div>
+						<div class="order-modal__col order-modal__textarea">
+							<label for="address">Delivery Address</label>
+							<textarea name="address" id="address" rows="4" required></textarea>
+						</div>
+
+						<button>Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
