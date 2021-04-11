@@ -378,40 +378,44 @@
 				</section>
 			</div> -->
 		</footer>
-		<div class="order-modal order-modal--hidden">
+		<div class="order-modal">
+			<div class="order-modal__overlay"></div>
 			<div class="order-modal__container">
-				<div class="order-modal__container__close">&times;</div>
-				<div class="order-modal__title">Request a quote</div>
-				<form>
-					<div class="order-modal__content">
-						<div class="order-modal__col">
+				<div class="order-modal__header">
+					<div class="order-modal__header__title">Request a quote</div>
+					<div class="order-modal__header__close">&times;</div>
+				</div>
+				<div class="order-modal__body">
+					<form>
+						<div class="order-modal__input-group">
 							<label for="name">Name</label>
 							<input type="text" id="name" required />
 						</div>
-						<div class="order-modal__col">
+						<div class="order-modal__input-group">
 							<label for="email">Email</label>
 							<input type="email" name="email" id="email" required />
 						</div>
-						<div class="order-modal__col">
+						<div class="order-modal__input-group">
 							<label for="phone">Phone Number</label>
 							<input type="tel" name="phone" id="phone" required />
 						</div>
-						<div class="order-modal__col">
+						<div class="order-modal__input-group">
 							<label for="date">Date of Event</label>
 							<input type="date" name="date" id="date" required />
 						</div>
-						<div class="order-modal__col">
+						<div class="order-modal__input-group">
 							<label for="numGuests">Number of Guests</label>
 							<input type="number" min="0" name="numGuests" id="numGuests" required />
 						</div>
-						<div class="order-modal__col order-modal__textarea">
+						<div class="order-modal__input-group order-modal__textarea">
 							<label for="address">Delivery Address</label>
 							<textarea name="address" id="address" rows="4" required></textarea>
 						</div>
-
-						<button>Submit</button>
-					</div>
-				</form>
+						<div class="order-modal__input-group order-modal__textarea">
+							<button>Submit</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</body>
