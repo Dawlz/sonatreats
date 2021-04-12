@@ -529,10 +529,10 @@ html {
 	height: 100%;
 	z-index: 1000;
 
-	// &--hidden {
-	// 	visibility: hidden;
-	// 	opacity: 0;
-	// }
+	&--hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
 
 	&__overlay {
 		position: absolute;
@@ -612,7 +612,7 @@ html {
 				}
 			}
 
-			label{
+			label {
 				font-size: 1.7rem;
 			}
 

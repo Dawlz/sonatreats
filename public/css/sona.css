@@ -549,6 +549,11 @@ html {
   z-index: 1000;
 }
 
+.order-modal--hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .order-modal__overlay {
   position: absolute;
   top: 0;
