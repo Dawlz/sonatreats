@@ -2,7 +2,7 @@ $(function () {
 	$('.hero__cta-button').click(function () {
 		$('.order-modal').toggleClass('order-modal--hidden');
 	});
-	$('.order-modal__container__close').click(function () {
+	$('.order-modal__header__close').click(function () {
 		$('.order-modal').addClass('order-modal--hidden');
 	});
 
