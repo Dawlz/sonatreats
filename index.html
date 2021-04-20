@@ -31,7 +31,7 @@
 				</nav>
 				<div class="hero">
 					<div class="hero__tagline">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
-					<button class="hero__cta-button">Request a Quote</button>
+					<button class="hero__cta-button">Plan an Event</button>
 				</div>
 			</header>
 		</div>
@@ -120,6 +120,21 @@
 			</div>
 		</section>
 		<div class="divider-top"></div>
+		<section class="order-now">
+			<!-- <h2 class="section-header">Order Now!</h2> -->
+			<div class="order-now__content">
+				<div class="order-now__content--top">
+					<h5>Why wait?</h5>
+					<p>
+						Get your hands on the <span class="underline">BEST</span> <span class="italic bold">pastries</span>,
+						<span class="italic bold">drinks</span>, and <span class="italic bold">desserts</span> now!
+					</p>
+				</div>
+				<div class="order-now__content--bottom">
+					<button class="creations__quote-button">Order Now!</button>
+				</div>
+			</div>
+		</section>
 		<!-- <section class="order" id="placeOrder"> -->
 
 		<!-- <div>
@@ -261,7 +276,7 @@
 		<!-- </form> -->
 		<!-- </section> -->
 
-		<div class="divider-bottom"></div>
+		<!-- <div class="divider-bottom"></div> -->
 		<footer class="footer">
 			<section class="footer__social-media">
 				<div class="footer__social-media__heading">
@@ -314,69 +329,6 @@
 				</script>
 				Sona Treats. Developed with &#128153; by Dawlz
 			</section>
-			<!-- <div class="col-sm-4">
-				<section class="siteNav" id="navigate">
-					<h5 class="">Site Nav</h5>
-					<a class="" href="#" title="Home">Back to top</a><br />
-					<a class="" href="#aboutUs" title="About SonaTreats">About</a><br />
-					<a class="" href="#services" title="Our Services">Services</a><br />
-					<a class="" href="#placeOrder" title="Place Order">Order</a><br />
-					<a class="" href="#contact" title="Contact Us">Contact</a><br />
-				</section>
-			</div>
-			<div class="col-4">
-				<section class="siteNav" id="socials">
-					<h5 class="">Follow us</h5>
-					<a class="" href="#" title="facebook"
-						><img
-							class="m-sm-2"
-							src="./images/facebook.svg"
-							alt="facebook"
-							
-							height="40px"
-							title="follow sonatreats on facebook"
-					/></a>
-					<a class="" href="#" title="instagram"
-						><img
-							class="m-sm-2"
-							src="./images/instagram.png"
-							alt="instagram"
-							
-							height="40px"
-							title="follow sonatreats on instagram"
-					/></a>
-					<a class="" href="#" title="twitter"
-						><img class="m-sm-2" src="./images/twitter.svg" alt="twitter"  height="30px" title="follow sonatreats on twitter"
-					/></a>
-					<a class="" href="https://wa.me/2348136090668" title="whatsapp"
-						><img class="m-sm-2" src="./images/whatsapp-logo.png" alt="whatsapp" width="60px" height="40px" title="send a dm on whatsapp"
-					/></a>
-				</section>
-			</div>
-			<div class="col-4">
-				<section class="siteNav" id="talkDirectly">
-					<h5 class="">Talk to us</h5>
-					<a class="" href="tel:+2348136090668"
-						><img class="m-sm-2" src="./images/phone.png" alt="call Us" width="40px" height="30px" title="Give us a call"
-					/></a>
-					<a class="" href="mailto:sonaventures1@gmail.com?subject=Enquiry&body=Hello,%20I%20will%20like%20to%20place%20an%20order"
-						><img class="m-sm-2" src="./images/email.png" alt="send mail" width="40px" height="30px" title="send an Email" /></a
-					><br />
-					<a class="" href="sms:+2348136090668&body=Hello,%20I%20will%20like%20to%20place%20an%20order"
-						><img class="m-sm-2" src="./images/iosMessage.png" alt="send text on iOS" width="40px" height="30px" title="send an Email" />
-						(iOS)</a
-					><br />
-					<a class="" href="sms:+2348136090668?body=Hello,%20I%20will%20like%20to%20place%20an%20order">
-						<img class="m-sm-2" src="./images/sms.png" alt="send text on android" width="40px" height="30px" title="send an Email" />
-						(android) </a
-					><br />
-				</section>
-			</div>
-			<div class="col-sm-4 m-sm-auto">
-				<section class="siteNav" id="developer">
-					<h6>Developed with &#128153 by </h6>
-				</section>
-			</div> -->
 		</footer>
 		<div class="order-modal order-modal--hidden">
 			<div class="order-modal__overlay"></div>
@@ -412,6 +364,46 @@
 							<textarea name="address" id="address" rows="4" required></textarea>
 						</div>
 						<div class="order-modal__input-group order-modal__textarea">
+							<button>Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="request-modal request-modal--hidden">
+			<div class="request-modal__overlay"></div>
+			<div class="request-modal__container">
+				<div class="request-modal__header">
+					<div class="request-modal__header__title">Request a quote</div>
+					<div class="request-modal__header__close">&times;</div>
+				</div>
+				<div class="request-modal__body">
+					<form>
+						<div class="request-modal__input-group">
+							<label for="name">Name</label>
+							<input type="text" id="name" required />
+						</div>
+						<div class="request-modal__input-group">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required />
+						</div>
+						<div class="request-modal__input-group">
+							<label for="phone">Phone Number</label>
+							<input type="tel" name="phone" id="phone" required />
+						</div>
+						<div class="request-modal__input-group">
+							<label for="date">Date of Event</label>
+							<input type="date" name="date" id="date" required />
+						</div>
+						<div class="request-modal__input-group">
+							<label for="numGuests">Number of Guests</label>
+							<input type="number" min="0" name="numGuests" id="numGuests" required />
+						</div>
+						<div class="request-modal__input-group request-modal__textarea">
+							<label for="address">Delivery Address</label>
+							<textarea name="address" id="address" rows="4" required></textarea>
+						</div>
+						<div class="request-modal__input-group request-modal__textarea">
 							<button>Submit</button>
 						</div>
 					</form>
