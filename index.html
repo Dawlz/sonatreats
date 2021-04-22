@@ -127,7 +127,7 @@
 					<h5>Why wait?</h5>
 					<p>
 						Get your hands on the <span class="underline">BEST</span> <span class="italic bold">pastries</span>,
-						<span class="italic bold">drinks</span>, and <span class="italic bold">desserts</span> now!
+						<span class="italic bold">drinks</span>, and <span class="italic bold">desserts</span> without leaving your couch!
 					</p>
 				</div>
 				<div class="order-now__content--bottom">
@@ -137,51 +137,7 @@
 		</section>
 		<!-- <section class="order" id="placeOrder"> -->
 
-		<!-- <div>
-				<form action="" method="post" id="formQuery">
-					<label for="orderType">What service do you need?</label>
-					<select id="order" name="orderType" size="1">
-						<option value="select" disabled selected>Please make a selection</option>
-						<option value="Event">Event Catering</option>
-						<option value="Cakes and Dessert">Cakes and Dessert</option>
-					</select>
-				</form>
-			</div>
-			<form action="Netlify" method="post" id="event">
-				<label for="name">Full Name:</label>
-				<input type="text" name="name" id="name" /><br />
-				<label for="address">Event Venue (Full address):</label>
-				<input type="text" name="address" id="address" required /><br />
-				<label for="phone">Phone Number:</label>
-				<input type="tel" name="phone" id="phone" required /><br />
-				<label for="email">Email:</label>
-				<input type="email" name="email" id="email" required /><br />
-				<label for="date">Date of Event:</label>
-				<input type="date" name="date" id="date" required />
-				<label for="eventType">Type of event:</label>
-				<select required id="order" name="eventType" size="1">
-					<option value="select" disabled selected>Please make a selection</option>
-					<option value="wedding">Wedding</option>
-					<option value="birthday">Birthday</option>
-					<option value="getTogether">Get Together</option>
-					<option value="luncheon">Luncheon/Office Party</option>
-					<option value="picnic">Picnic/Outdoor Event</option>
-					<option value="cocktailParty">Cocktail Party</option>
-					<option value="buffetParty">Bufet Party</option></select
-				><br />
-				<p>Number of Guests Expected:</p>
-				<input type="radio" name="guests" id="small" />
-				<label for="small">1 - 20</label><br />
-				<input type="radio" name="guests" id="gathering" />
-				<label for="gathering">21 - 50</label><br />
-				<input type="radio" name="guests" id="party" />
-				<label for="party">51 - 100</label><br />
-				<input type="radio" name="guests" id="large" />
-				<label for="large">101 - 200</label><br />
-				<input type="radio" name="guests" id="special" />
-				<label for="special">201 and more</label><br />
-				<input type="submit" value="Request Service" />
-			</form>
+		<!--
 
 			<form action="Netlify" method="post" id="cakeNmore">
 				<label for="name">Full Name:</label>
@@ -334,7 +290,7 @@
 			<div class="order-modal__overlay"></div>
 			<div class="order-modal__container">
 				<div class="order-modal__header">
-					<div class="order-modal__header__title">Request a quote</div>
+					<div class="order-modal__header__title">Treats shipped to you!</div>
 					<div class="order-modal__header__close">&times;</div>
 				</div>
 				<div class="order-modal__body">
@@ -352,7 +308,7 @@
 							<input type="tel" name="phone" id="phone" required />
 						</div>
 						<div class="order-modal__input-group">
-							<label for="date">Date of Event</label>
+							<label for="date">Deliver by</label>
 							<input type="date" name="date" id="date" required />
 						</div>
 						<div class="order-modal__input-group">
@@ -363,8 +319,38 @@
 							<label for="address">Delivery Address</label>
 							<textarea name="address" id="address" rows="4" required></textarea>
 						</div>
+
+						<div class="order-modal__item-selection">
+							<div class="labels">
+								<label for="item">Item</label>
+
+								<label for="quantity">Quantity</label>
+								<label for="size">Size</label>
+								<label for="size">&nbsp;</label>
+							</div>
+							<div class="line-item" id="line-0">
+								<select name="item" id="">
+									<option value="cake">Cake</option>
+									<option value="cookie">Cookies</option>
+									<option value="cupcakes">Cupcakes</option>
+									<option value="burgers">Burgers</option>
+									<option value="waffles">Waffles</option>
+									<option value="burgers">Burgers</option>
+									<option value="fruit-parfait">Fruit Parfait</option>
+									<option value="cake-parfait">Cake Parfait</option>
+									<option value="frozen-mocktail">Frozen Mocktail</option>
+									<option value="shaken-mocktail">Shaken Mocktail</option>
+									<option value="pina-colada">Pina Colada</option>
+								</select>
+								<input type="number" min="0" name="quantity" class="quantity" />
+								<input type="number" min="0" name="size" class="quantity" />
+								<button class="line-item__remove" id="line-remove-0">&times;</button>
+							</div>
+							<button class="add-line">+</button>
+						</div>
+
 						<div class="order-modal__input-group order-modal__textarea">
-							<button>Submit</button>
+							<button class="submit">Submit</button>
 						</div>
 					</form>
 				</div>

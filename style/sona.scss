@@ -29,6 +29,10 @@ body {
 	background-color: $background-light;
 	color: $base-font-color;
 }
+.modal-open {
+	overflow-y: hidden;
+	padding-right: 15px;
+}
 
 html {
 	box-sizing: border-box;
@@ -468,7 +472,6 @@ html {
 }
 
 .order-now {
-	// padding: 5rem 2rem 10rem 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -485,22 +488,18 @@ html {
 		justify-content: flex-start;
 		align-items: center;
 		flex-wrap: wrap;
+		text-align: center;
 
 		&--top {
-			// margin: 10rem 10rem;
 			width: 50%;
-			// padding-left: 5rem;
-			// padding-right: 5rem;
 			font-size: 3rem;
 			max-width: 50rem;
-			// height: 50px
-			// wid
+			line-height: 1.2;
 
 			h5 {
 				font-family: 'Affectionately Yours';
 				font-weight: bold;
 				font-size: 5rem;
-				text-align: center;
 				padding-bottom: 5rem;
 			}
 		}
@@ -515,9 +514,67 @@ html {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	z-index: 1000;
+	overflow-y: scroll;
+
+	&__item-selection {
+		grid-column: 1 / -1;
+
+		.labels {
+			display: grid;
+			grid-template-columns: minmax(min-content, 1fr) repeat(2, 10rem) 1rem;
+			grid-gap: 2rem 5rem;
+		}
+
+		.line-item {
+			display: grid;
+			grid-template-columns: minmax(min-content, 1fr) repeat(2, 10rem) min-content;
+			grid-gap: 2rem 5rem;
+			margin-bottom: 2rem;
+
+			select {
+				font-size: 1.7rem;
+
+				height: 100%;
+				border-radius: 4px;
+			}
+
+			&__remove {
+				font-size: 3rem;
+			background: none;
+			border: none;
+			cursor: pointer;
+			}
+		}
+
+		.add-line {
+			font-size: 3rem;
+			background: none;
+			border: none;
+			cursor: pointer;
+		}
+	}
+
+	// &__dropdown {
+
+	// 	.line-item {
+	// 		width: 100%;
+	// 		display: flex;
+	// 		justify-content: flex-start;
+	// 		flex-wrap: wrap;
+
+	// 		select {
+	// 			min-width: 200px;
+	// 			width: 40%;
+	// 		}
+
+	// 		input[type='number'] {
+	// 			width: 100px;
+	// 		}
+	// 	}
+	// }
 
 	&--hidden {
 		visibility: hidden;
@@ -528,8 +585,8 @@ html {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		width: 100vw;
+		height: 150vh;
 		background-image: linear-gradient(to left top, rgba($brand-orange, 0.9), rgba($brand-green, 0.9));
 		z-index: 9;
 	}
@@ -537,9 +594,10 @@ html {
 	&__container {
 		position: absolute;
 		padding: 5rem;
-		top: 50%;
+		margin: 5rem 0;
+		top: 0;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, 0%);
 		z-index: 1000;
 
 		background-color: $background-light;
@@ -547,9 +605,8 @@ html {
 		border-radius: 5px;
 		display: flex;
 		flex-direction: column;
-		overflow-y: visible;
 		max-width: 100rem;
-		width: 80%;
+		width: 100vw;
 	}
 	&__header {
 		position: relative;
@@ -575,8 +632,11 @@ html {
 		form {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			// grid-template-columns:min-content min-content min-content;
 			grid-gap: 2rem 5rem;
+
+			.cake {
+				display: flex;
+			}
 
 			.order-modal__input-group {
 				display: flex;
@@ -617,7 +677,7 @@ html {
 				resize: none;
 			}
 
-			button {
+			button.submit {
 				cursor: pointer;
 				font-size: 3rem;
 				padding: 2rem 5rem;
@@ -644,6 +704,7 @@ html {
 		}
 	}
 }
+
 .request-modal {
 	position: fixed;
 	top: 0;
