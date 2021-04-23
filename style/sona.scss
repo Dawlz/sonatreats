@@ -315,7 +315,7 @@ html {
 		position: relative;
 		display: flex;
 		justify-content: center;
-	
+
 		#img-1 {
 			top: 0;
 			left: 1rem;
@@ -390,13 +390,24 @@ html {
 	justify-content: space-around;
 	align-items: stretch;
 	flex-wrap: wrap;
+
+	@media only screen and (max-width: $bp-medium) {
+		flex-direction: column;
+	}
 	.card {
 		cursor: default;
 		border-radius: 2px;
 		background-color: rgba($background-light, 0.8);
-		flex-basis: 20%;
+		flex: 0 0 20%;
 		padding: 2rem;
 		transition: all 0.2s;
+
+		@media only screen and (max-width: $bp-medium) {
+			&:not(:last-child) {
+				margin-bottom: 5rem;
+			}
+		}
+
 		&__title {
 			font-family: 'Affectionately Yours';
 			font-size: 3rem;
@@ -410,6 +421,10 @@ html {
 
 		&:hover {
 			transform: scale(1.2);
+
+			@media only screen and (max-width: $bp-medium) {
+				transform: scale(1);
+			}
 		}
 	}
 }
