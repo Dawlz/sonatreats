@@ -591,6 +591,12 @@ html {
   margin: 2rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .creations .card {
+    width: 100%;
+  }
+}
+
 .creations .card:nth-child(3n + 0) .card__side--front {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#fba733), to(#a8cf45));
   background-image: linear-gradient(to right bottom, #fba733, #a8cf45);
@@ -615,7 +621,6 @@ html {
   padding: 4rem;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 3px;
   overflow: hidden;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -633,6 +638,12 @@ html {
           justify-content: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .creations .card__side {
+    border-radius: 2px;
+  }
+}
+
 .creations .card__side--front {
   color: #1d1d1d;
   font-family: 'Affectionately Yours';
@@ -640,9 +651,16 @@ html {
 }
 
 .creations .card__side--back {
+  background-size: cover;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background-size: cover;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .creations .card__side--back {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .creations .card__side--back-1 {
@@ -676,9 +694,23 @@ html {
           transform: rotateY(-180deg);
 }
 
+@media only screen and (max-width: 56.25em) {
+  .creations .card:hover .card__side--front {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 .creations .card:hover .card__side--back {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .creations .card:hover .card__side--back {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .creations__quote-button {
