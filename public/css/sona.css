@@ -345,7 +345,7 @@ html {
   padding: 5rem 0;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .about-us {
     padding: 0.5rem 0;
   }
@@ -371,13 +371,14 @@ html {
   font-size: 2rem;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .about-us__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    height: auto;
     padding: 0 10rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -395,6 +396,12 @@ html {
   .about-us__text {
     padding-right: 0rem;
     margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about-us__text {
+    margin-bottom: 5rem;
   }
 }
 
@@ -425,19 +432,34 @@ html {
   top: 15rem;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .about-us .composition {
-    padding-left: 0rem;
+    padding: 0 0 5rem 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-us .composition #img-1 {
+    left: 0;
+    top: 0;
+    width: 100%;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
   .about-us .composition #img-2 {
-    top: -1rem;
-    right: 0;
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    top: 1rem;
+    right: 0rem;
+    width: 100%;
     z-index: 5;
   }
   .about-us .composition #img-3 {
-    top: 0;
+    top: 1rem;
+    left: 0rem;
+    width: 100%;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 
@@ -449,9 +471,9 @@ html {
           box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .about-us .composition__photo {
-    width: 30%;
+    width: 80%;
     position: relative;
     float: left;
   }
@@ -842,6 +864,12 @@ html {
   grid-gap: 2rem 5rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .order-modal__item-selection .labels {
+    grid-gap: 2rem 2rem;
+  }
+}
+
 .order-modal__item-selection .line-item {
   display: -ms-grid;
   display: grid;
@@ -852,8 +880,15 @@ html {
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .order-modal__item-selection .line-item {
+    grid-gap: 2rem 2rem;
+  }
+}
+
 .order-modal__item-selection .line-item select {
   font-size: 1.7rem;
+  background-color: white;
   height: 100%;
   border-radius: 4px;
 }
@@ -975,6 +1010,7 @@ html {
   font-family: inherit;
   font-size: 1.7rem;
   width: calc(100%);
+  background-color: white;
 }
 
 .order-modal__body form label {
@@ -1078,6 +1114,15 @@ html {
   width: 80%;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .request-modal__container {
+    top: 25%;
+    -webkit-transform: translate(-50%, -25%);
+            transform: translate(-50%, -25%);
+    width: 100%;
+  }
+}
+
 .request-modal__header {
   position: relative;
 }
@@ -1135,6 +1180,7 @@ html {
   font-family: inherit;
   font-size: 1.7rem;
   width: calc(100%);
+  background-color: white;
 }
 
 .request-modal__body form label {
@@ -1227,6 +1273,12 @@ html {
   padding-bottom: 2rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .footer__social-media {
+    width: 75%;
+  }
+}
+
 .footer__social-media__heading {
   font-size: 1.8rem;
   padding-bottom: 1rem;
@@ -1275,6 +1327,12 @@ html {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   padding-top: 3rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer__site-nav {
+    width: 75%;
+  }
 }
 
 .footer__site-nav a,
