@@ -140,6 +140,10 @@ html {
 			transition: all 0.2s;
 			outline: none;
 
+			@media only screen and (max-width: $bp-medium) {
+				font-size: 2.5rem;
+			}
+
 			&:hover {
 				transform: scale(1.05);
 				box-shadow: 0 5rem 6rem rgba(0, 0, 0, 0.3);
@@ -172,6 +176,10 @@ html {
 			flex-wrap: wrap;
 			color: $background-light;
 			font-size: 5.5rem;
+
+			@media only screen and (max-width: $bp-medium) {
+				width: 75%;
+			}
 		}
 	}
 
@@ -556,6 +564,10 @@ html {
 		transition: all 0.2s;
 		outline: none;
 
+		@media only screen and (max-width: $bp-medium) {
+			font-size: 2.5rem;
+		}
+
 		&:hover {
 			transform: scale(1.05);
 			box-shadow: 0 5rem 6rem rgba(0, 0, 0, 0.3);
@@ -574,7 +586,7 @@ html {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 500px;
+	height: 50rem;
 	background-size: cover;
 	background-image: linear-gradient(to left top, rgba($brand-orange, 0.8), rgba($brand-green, 0.8)), url('/images/cookie-banner.jpg');
 

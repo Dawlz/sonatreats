@@ -168,6 +168,12 @@ html {
   outline: none;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header .hero__cta-button {
+    font-size: 2.5rem;
+  }
+}
+
 .header .hero__cta-button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -197,6 +203,12 @@ html {
       flex-wrap: wrap;
   color: #f3f0f0;
   font-size: 5.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .hero__tagline {
+    width: 75%;
+  }
 }
 
 .header__nav {
@@ -728,6 +740,12 @@ html {
   outline: none;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .creations__quote-button {
+    font-size: 2.5rem;
+  }
+}
+
 .creations__quote-button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -757,7 +775,7 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 500px;
+  height: 50rem;
   background-size: cover;
   background-image: -webkit-gradient(linear, right bottom, left top, from(rgba(251, 167, 51, 0.8)), to(rgba(168, 207, 69, 0.8))), url("/images/cookie-banner.jpg");
   background-image: linear-gradient(to left top, rgba(251, 167, 51, 0.8), rgba(168, 207, 69, 0.8)), url("/images/cookie-banner.jpg");
