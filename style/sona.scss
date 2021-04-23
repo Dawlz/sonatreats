@@ -9,6 +9,11 @@ $brand-orange: #fba733;
 $brand-green: #a8cf45;
 $background-light: rgb(243, 240, 240);
 
+$bp-largest: 75em; //1200px 75 = 1200/16;
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
 * {
 	margin: 0;
 	padding: 0;
@@ -37,6 +42,14 @@ body {
 html {
 	box-sizing: border-box;
 	font-size: 62.5%; //1rem = 10px
+
+	@media screen and (max-width: $bp-largest) {
+		font-size: 50%;
+	}
+
+	@media screen and (max-width: $bp-small) {
+		font-size: 45%;
+	}
 }
 
 .bold {
@@ -69,24 +82,13 @@ html {
 	background-color: $background-light;
 	justify-content: space-between;
 
-	&__nav {
-		display: flex;
-		height: 8rem;
-		z-index: 9;
-		width: 100%;
-	}
-
 	&__logo {
 		z-index: 10;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		padding: 1rem;
-		position: absolute;
-		top: 1.5rem;
-		left: 50%;
-
-		transform: translateX(-50%);
+		margin-top: 10rem;
 		height: 15rem;
 		background-color: $background-light;
 
@@ -94,6 +96,24 @@ html {
 		border-style: double;
 		border-width: 10px;
 		border-radius: 10px;
+		order: 2;
+
+		img {
+			width: 10rem;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			order: 1;
+			margin-top: 0;
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			flex-basis: 10%;
+			// width: 5rem;
+			img {
+				width: 5rem;
+			}
+		}
 	}
 
 	.hero {
@@ -119,6 +139,10 @@ html {
 			box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 			transition: all 0.2s;
 			outline: none;
+
+			@media only screen and (max-width: $bp-medium) {
+				font-size: 2.5rem;
+			}
 
 			&:hover {
 				transform: scale(1.05);
@@ -152,6 +176,10 @@ html {
 			flex-wrap: wrap;
 			color: $background-light;
 			font-size: 5.5rem;
+
+			@media only screen and (max-width: $bp-medium) {
+				width: 75%;
+			}
 		}
 	}
 
@@ -159,6 +187,7 @@ html {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		height: 8rem;
 		transition: all 0.2s;
 		padding: 0px 15px;
 		color: $brand-orange;
@@ -175,44 +204,36 @@ html {
 			flex: 0 0 30%;
 			justify-content: space-around;
 			align-items: center;
-		}
+			order: 1;
+			@media only screen and (max-width: $bp-medium) {
+				order: 2;
+				flex-basis: 45%;
+			}
 
-		&--left &-item {
-			display: block;
-			// padding: 15px;
-			// align-self: stretch;
-			color: $brand-orange;
-			text-decoration: none;
+			.header__nav-item {
+				color: $brand-orange;
+				text-decoration: none;
+			}
 		}
 
 		&--right {
 			display: flex;
 			flex: 0 0 30%;
 			justify-content: space-around;
-		}
+			order: 3;
 
-		&--right &-item {
-			color: $brand-orange;
-
-			justify-self: center;
-			text-decoration: none;
+			@media only screen and (max-width: $bp-medium) {
+				flex-basis: 45%;
+			}
+			.header__nav-item {
+				color: $brand-orange;
+				text-decoration: none;
+			}
 		}
 
 		&-item:hover {
 			color: $brand-green;
-			text-decoration: none;
 		}
-		// &__nav-item {
-		// 	transition: all 0.2s;
-		// 	padding: 0px 15px;
-		// 	color: $brand-orange;
-		// 	font-family: 'Affectionately Yours';
-		// 	font-size: 3rem;
-		// 	letter-spacing: 0.1rem;
-		// 	text-decoration: none;
-		// 	border-left: 2px solid transparent;
-		// 	border-right: 2px solid transparent;
-		// }
 	}
 }
 
@@ -244,6 +265,10 @@ html {
 	font-family: 'Affectionately Yours';
 	font-size: 6rem;
 	margin-bottom: 10rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		margin-bottom: 5rem;
+	}
 }
 
 .about-us {
@@ -256,6 +281,9 @@ html {
 	color: $base-font-color;
 	padding: 5rem 0;
 
+	@media only screen and (max-width: $bp-small) {
+		padding: 0.5rem 0;
+	}
 	h4 {
 		letter-spacing: 2px;
 		font-size: 3rem;
@@ -270,17 +298,36 @@ html {
 		display: flex;
 		justify-content: space-between;
 		font-size: 2rem;
+
+		@media only screen and (max-width: $bp-small) {
+			flex-direction: column;
+			width: 100%;
+			height: auto;
+			padding: 0 10rem;
+			justify-content: flex-start;
+		}
 	}
 
 	&__text {
 		flex-basis: 50%;
 		padding-right: 10rem;
+
+		@media only screen and (max-width: $bp-medium) {
+			padding-right: 0rem;
+			margin-bottom: 10rem;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			margin-bottom: 5rem;
+		}
 	}
 
 	.composition {
 		padding-left: 10rem;
 		flex-basis: 50%;
 		position: relative;
+		display: flex;
+		justify-content: center;
 
 		#img-1 {
 			top: 0;
@@ -294,11 +341,49 @@ html {
 			top: 15rem;
 		}
 
+		@media only screen and (max-width: $bp-small) {
+			padding: 0 0 5rem 0;
+			margin: 0;
+			flex-direction: column;
+			#img-1 {
+				left: 0;
+				top: 0;
+				width: 100%;
+				transform: scale(0.9);
+			}
+
+			#img-2 {
+				top: 1rem;
+				right: 0rem;
+				// left: 0;
+				width: 100%;
+
+				// top: -10rem;
+				// right: -12rem;
+				// transform: scale(0.8);
+				z-index: 5;
+			}
+
+			#img-3 {
+				top: 1rem;
+				left: 0rem;
+				width: 100%;
+				transform: scale(0.9);
+			}
+		}
+
 		&__photo {
 			position: absolute;
 			width: 65%;
 			border-radius: 2px;
 			box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.2);
+
+			@media only screen and (max-width: $bp-small) {
+				width: 80%;
+				position: relative;
+				float: left;
+			}
+
 			&:hover {
 				transition: all 0.2s;
 				outline: 1rem solid rgba($brand-orange, 0.1);
@@ -331,13 +416,24 @@ html {
 	justify-content: space-around;
 	align-items: stretch;
 	flex-wrap: wrap;
+
+	@media only screen and (max-width: $bp-medium) {
+		flex-direction: column;
+	}
 	.card {
 		cursor: default;
 		border-radius: 2px;
 		background-color: rgba($background-light, 0.8);
-		flex-basis: 20%;
+		flex: 0 0 20%;
 		padding: 2rem;
 		transition: all 0.2s;
+
+		@media only screen and (max-width: $bp-medium) {
+			&:not(:last-child) {
+				margin-bottom: 5rem;
+			}
+		}
+
 		&__title {
 			font-family: 'Affectionately Yours';
 			font-size: 3rem;
@@ -351,6 +447,10 @@ html {
 
 		&:hover {
 			transform: scale(1.2);
+
+			@media only screen and (max-width: $bp-medium) {
+				transform: scale(1);
+			}
 		}
 	}
 }
@@ -371,13 +471,16 @@ html {
 		justify-content: space-evenly;
 	}
 	.card {
-		// FUNCTIONALITY
 		perspective: 150rem;
 		-moz-perspective: 150rem;
 		position: relative;
 		height: 20rem;
 		width: 20rem;
 		margin: 2rem;
+
+		@media only screen and (max-width: $bp-small) {
+			width: 100%;
+		}
 
 		&:nth-child(3n + 0) .card__side--front {
 			background-image: linear-gradient(to right bottom, $brand-orange, $brand-green);
@@ -397,7 +500,6 @@ html {
 			padding: 4rem;
 			-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
-			border-radius: 3px;
 			overflow: hidden;
 			box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
 			width: inherit;
@@ -407,6 +509,10 @@ html {
 			align-items: center;
 			justify-content: center;
 
+			@media only screen and (max-width: $bp-medium) {
+				border-radius: 2px;
+			}
+
 			&--front {
 				color: $base-font-color;
 				font-family: 'Affectionately Yours';
@@ -414,8 +520,13 @@ html {
 			}
 
 			&--back {
-				transform: rotateY(180deg);
 				background-size: cover;
+				transform: rotateY(180deg);
+
+				@media only screen and (max-width: $bp-medium) {
+					transform: none;
+				}
+
 				&-1 {
 					background-image: url('/images/cookie1.jpg');
 				}
@@ -442,9 +553,17 @@ html {
 
 		&:hover .card__side--front {
 			transform: rotateY(-180deg);
+
+			@media only screen and (max-width: $bp-medium) {
+				transform: none;
+			}
 		}
 		&:hover .card__side--back {
 			transform: rotateY(0);
+
+			@media only screen and (max-width: $bp-medium) {
+				transform: none;
+			}
 		}
 	}
 	&__quote-button {
@@ -458,6 +577,10 @@ html {
 		box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 		transition: all 0.2s;
 		outline: none;
+
+		@media only screen and (max-width: $bp-medium) {
+			font-size: 2.5rem;
+		}
 
 		&:hover {
 			transform: scale(1.05);
@@ -477,7 +600,7 @@ html {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 500px;
+	height: 50rem;
 	background-size: cover;
 	background-image: linear-gradient(to left top, rgba($brand-orange, 0.8), rgba($brand-green, 0.8)), url('/images/cookie-banner.jpg');
 
@@ -526,6 +649,10 @@ html {
 			display: grid;
 			grid-template-columns: minmax(min-content, 1fr) repeat(2, 10rem) 1rem;
 			grid-gap: 2rem 5rem;
+
+			@media only screen and (max-width: $bp-medium) {
+				grid-gap: 2rem 2rem;
+			}
 		}
 
 		.line-item {
@@ -534,18 +661,22 @@ html {
 			grid-gap: 2rem 5rem;
 			margin-bottom: 2rem;
 
+			@media only screen and (max-width: $bp-medium) {
+				grid-gap: 2rem 2rem;
+			}
+
 			select {
 				font-size: 1.7rem;
-
+				background-color: white;
 				height: 100%;
 				border-radius: 4px;
 			}
 
 			&__remove {
 				font-size: 3rem;
-			background: none;
-			border: none;
-			cursor: pointer;
+				background: none;
+				border: none;
+				cursor: pointer;
 			}
 		}
 
@@ -556,25 +687,6 @@ html {
 			cursor: pointer;
 		}
 	}
-
-	// &__dropdown {
-
-	// 	.line-item {
-	// 		width: 100%;
-	// 		display: flex;
-	// 		justify-content: flex-start;
-	// 		flex-wrap: wrap;
-
-	// 		select {
-	// 			min-width: 200px;
-	// 			width: 40%;
-	// 		}
-
-	// 		input[type='number'] {
-	// 			width: 100px;
-	// 		}
-	// 	}
-	// }
 
 	&--hidden {
 		visibility: hidden;
@@ -659,6 +771,7 @@ html {
 					font-family: inherit;
 					font-size: 1.7rem;
 					width: calc(100%);
+					background-color: white;
 				}
 			}
 
@@ -744,6 +857,13 @@ html {
 		overflow-y: visible;
 		max-width: 100rem;
 		width: 80%;
+
+		@media only screen and (max-width: $bp-medium) {
+			top: 25%;
+			transform: translate(-50%, -25%);
+
+			width: 100%;
+		}
 	}
 	&__header {
 		position: relative;
@@ -793,6 +913,7 @@ html {
 					font-family: inherit;
 					font-size: 1.7rem;
 					width: calc(100%);
+					background-color: white;
 				}
 			}
 
@@ -848,6 +969,7 @@ html {
 	justify-content: space-between;
 	padding-top: 5rem;
 	padding-bottom: 1rem;
+
 	&__social-media {
 		display: flex;
 		flex-direction: column;
@@ -855,6 +977,10 @@ html {
 		align-items: center;
 		justify-content: space-evenly;
 		padding-bottom: 2rem;
+
+		@media only screen and (max-width: $bp-medium) {
+			width: 75%;
+		}
 
 		&__heading {
 			font-size: 1.8rem;
@@ -887,6 +1013,10 @@ html {
 		justify-content: space-evenly;
 		transition: all 0.2s;
 		padding-top: 3rem;
+
+		@media only screen and (max-width: $bp-medium) {
+			width: 75%;
+		}
 
 		a,
 		a:visited,

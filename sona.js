@@ -3,6 +3,20 @@ $(function () {
 	let nextId = 1;
 
 	$('.hero__cta-button').click(function () {
+		$('.request-modal').toggleClass('request-modal--hidden');
+		$('body').toggleClass('modal-open');
+	});
+	$('.request-modal__header__close').click(function () {
+		$('.request-modal').addClass('request-modal--hidden');
+		$('body').toggleClass('modal-open');
+	});
+
+	$('.request-modal__overlay').click(function () {
+		$('.request-modal').addClass('request-modal--hidden');
+		$('body').toggleClass('modal-open');
+	});
+
+	$('.creations__quote-button').click(function () {
 		$('.order-modal').toggleClass('order-modal--hidden');
 		$('body').toggleClass('modal-open');
 	});
@@ -10,11 +24,8 @@ $(function () {
 		$('.order-modal').addClass('order-modal--hidden');
 		$('body').toggleClass('modal-open');
 	});
-	$('.creations__quote-button').click(function () {
-		$('.order-modal').toggleClass('order-modal--hidden');
-		$('body').toggleClass('modal-open');
-	});
-	$('.order-modal__header__close').click(function () {
+
+	$('.order-modal__overlay').click(function () {
 		$('.order-modal').addClass('order-modal--hidden');
 		$('body').toggleClass('modal-open');
 	});
