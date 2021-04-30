@@ -647,7 +647,7 @@ html {
 
 		.labels {
 			display: grid;
-			grid-template-columns: minmax(min-content, 1fr) repeat(2, 10rem) 1rem;
+			grid-template-columns: minmax(min-content, 1fr) 10rem 10rem 1rem;
 			grid-gap: 2rem 5rem;
 
 			@media only screen and (max-width: $bp-medium) {
@@ -657,7 +657,7 @@ html {
 
 		.line-item {
 			display: grid;
-			grid-template-columns: minmax(min-content, 1fr) repeat(2, 10rem) min-content;
+			grid-template-columns: minmax(min-content, 1fr) 10rem 10rem min-content;
 			grid-gap: 2rem 5rem;
 			margin-bottom: 2rem;
 

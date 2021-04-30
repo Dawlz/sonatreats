@@ -858,9 +858,9 @@ html {
 .order-modal__item-selection .labels {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(min-content, 1fr) (10rem)[2] 1rem;
-      grid-template-columns: minmax(-webkit-min-content, 1fr) repeat(2, 10rem) 1rem;
-      grid-template-columns: minmax(min-content, 1fr) repeat(2, 10rem) 1rem;
+  -ms-grid-columns: minmax(min-content, 1fr) 10rem 10rem 1rem;
+      grid-template-columns: minmax(-webkit-min-content, 1fr) 10rem 10rem 1rem;
+      grid-template-columns: minmax(min-content, 1fr) 10rem 10rem 1rem;
   grid-gap: 2rem 5rem;
 }
 
@@ -873,9 +873,9 @@ html {
 .order-modal__item-selection .line-item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(min-content, 1fr) (10rem)[2] min-content;
-      grid-template-columns: minmax(-webkit-min-content, 1fr) repeat(2, 10rem) -webkit-min-content;
-      grid-template-columns: minmax(min-content, 1fr) repeat(2, 10rem) min-content;
+  -ms-grid-columns: minmax(min-content, 1fr) 10rem 10rem min-content;
+      grid-template-columns: minmax(-webkit-min-content, 1fr) 10rem 10rem -webkit-min-content;
+      grid-template-columns: minmax(min-content, 1fr) 10rem 10rem min-content;
   grid-gap: 2rem 5rem;
   margin-bottom: 2rem;
 }
