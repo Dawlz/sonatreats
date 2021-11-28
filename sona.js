@@ -17,8 +17,9 @@ $(function () {
 	});
 
 	/* TODO (11/27/2021 22:41) DAWLZ, what do you want displayed? */
+	// fixed now
 	$('.creations__plan-event-button').click(function () {
-		$('.order-modal').toggleClass('order-modal--hidden');
+		$('.request-modal').toggleClass('request-modal--hidden');
 		$('body').toggleClass('modal-open');
 	});
 
