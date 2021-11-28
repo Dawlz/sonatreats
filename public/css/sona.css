@@ -715,12 +715,12 @@ html {
 
 .creations .card__side--back-5 {
   background-position-y: 40%;
-  background-image: url("/images/cocktail1.jpg");
+  background-image: url("/images/milkshake.jpeg");
 }
 
 .creations .card__side--back-6 {
   background-position-y: 50%;
-  background-image: url("/images/mocktail1.jpg");
+  background-image: url("/images/mocktail1.jpeg");
 }
 
 .creations .card:hover .card__side--front {
