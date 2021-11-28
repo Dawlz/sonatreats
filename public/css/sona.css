@@ -747,7 +747,7 @@ html {
   }
 }
 
-.creations__quote-button {
+.creations__quote-button, .creations__plan-event-button {
   font-size: 2rem;
   padding: 2rem 5rem;
   border-radius: 50px;
@@ -763,19 +763,19 @@ html {
 }
 
 @media only screen and (max-width: 56.25em) {
-  .creations__quote-button {
+  .creations__quote-button, .creations__plan-event-button {
     font-size: 2.5rem;
   }
 }
 
-.creations__quote-button:hover {
+.creations__quote-button:hover, .creations__plan-event-button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-box-shadow: 0 5rem 6rem rgba(0, 0, 0, 0.3);
           box-shadow: 0 5rem 6rem rgba(0, 0, 0, 0.3);
 }
 
-.creations__quote-button:active {
+.creations__quote-button:active, .creations__plan-event-button:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transform: scale(1);

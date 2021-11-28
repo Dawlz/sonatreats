@@ -16,6 +16,12 @@ $(function () {
 		$('body').toggleClass('modal-open');
 	});
 
+	/* TODO (11/27/2021 22:41) DAWLZ, what do you want displayed? */
+	$('.creations__plan-event-button').click(function () {
+		$('.order-modal').toggleClass('order-modal--hidden');
+		$('body').toggleClass('modal-open');
+	});
+
 	$('.creations__quote-button').click(function () {
 		$('.order-modal').toggleClass('order-modal--hidden');
 		$('body').toggleClass('modal-open');
