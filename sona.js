@@ -15,9 +15,6 @@ $(function () {
 		$('.request-modal').addClass('request-modal--hidden');
 		$('body').toggleClass('modal-open');
 	});
-
-	/* TODO (11/27/2021 22:41) DAWLZ, what do you want displayed? */
-	// fixed now
 	$('.creations__plan-event-button').click(function () {
 		$('.request-modal').toggleClass('request-modal--hidden');
 		$('body').toggleClass('modal-open');
@@ -56,31 +53,4 @@ $(function () {
 			lineCount--;
 		}
 	});
-
-	// $('#event').hide();
-	// $('#cakeNmore').hide();
-	// $('#closeForm').hide();
-	// $('#order').change(function () {
-	// 	orderType = $(this).val();
-	// 	if (orderType === 'Event') {
-	// 		$('#cakeNmore').hide();
-	// 		$('#event').show();
-	// 		$('#closeForm').show();
-	// 	}
-	// 	if (orderType === 'Cakes and Dessert') {
-	// 		$('#event').hide();
-	// 		$('#cakeNmore').show();
-	// 		$('#closeForm').show();
-	// 	}
-	// });
-
-	// $('#closeForm').click(function () {
-	// 	$('#event').hide();
-	// 	$('#cakeNmore').hide();
-	// 	$(this).hide();
-	// });
-
-	// $('.overlay').click(function(){
-	//     $(this).toggleClass('overlayOnOff')
-	// })
 });
