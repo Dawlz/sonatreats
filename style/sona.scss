@@ -2,7 +2,7 @@
 	font-family: 'Affectionately Yours';
 	font-style: normal;
 	font-weight: normal;
-	src: url('/public/Affectionately\ Yours.ttf') format('truetype');
+	src: url('/public/Affectionately Yours.ttf') format('truetype');
 }
 $base-font-color: rgb(29, 29, 29);
 $brand-orange: #fba733;
@@ -41,7 +41,7 @@ body {
 
 html {
 	box-sizing: border-box;
-	font-size: 62.5%; //1rem = 10px
+	font-size: 62.5%;
 
 	@media screen and (max-width: $bp-largest) {
 		font-size: 50%;
